@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercearia do Seu Prozó</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            let visitorCount = localStorage.getItem('visitorCount') || 0;
+            visitorCount++;
+            localStorage.setItem('visitorCount', visitorCount);
+            $('#visitorCount').text(visitorCount);
+
+            // Animação do banner
+            function animateBanner() {
+                $('.banner').fadeIn(500).fadeOut(500, animateBanner);
+            }
+            animateBanner();
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Mercearia do Seu Prozó</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="produtos.html">Produtos</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <section class="banner">
+                <h2>Promoção do Dia: Arroz 5kg por R$ 18,00!</h2>
+            </section>
+            <section class="intro">
+                <h2>Bem-vindo à Mercearia do Seu Prozó!</h2>
+                <p>Encontre os melhores produtos aqui na nossa mercearia. Qualidade e bom preço para você!</p>
+            </section>
+            <section class="produtos">
+                <h3>Alguns de nossos produtos:</h3>
+                <div class="produto-lista">
+                    <div class="produto-item">
+                        <img src="https://www.camil.com.br/wp-content/uploads/sites/12/2020/06/images-upload-uploaded-1344-arroz-organico-768x768.png" alt="Arroz">
+                        <p>Arroz Camil 5kg- R$ 20,00</p>
+                    </div>
+                    <div class="produto-item">
+                        <img src="https://kicaldo.com.br/wp-content/uploads/2020/07/Kicaldo-feijaocarioca.png" alt="Feijão">
+                        <p>Feijão Kikaldo - R$ 8,00</p>
+                    </div>
+                    <div class="produto-item">
+                        <img src="https://ibassets.com.br/ib.item.image.big/b-34e639db6e194f2298b15b6ece990fd7.png" alt="Açúcar">
+                        <p>Açúcar Itamarati 1kg- R$ 5,00</p>
+                    </div>
+                    <div class="produto-item">
+                        <img src="https://coopsp.vtexassets.com/arquivos/ids/220920/7896089012101.jpg?v=637919563093530000" alt="Café">
+                        <p>Café pilão tradicional - R$ 15,00</p>
+                    </div>
+                    <div class="produto-item">
+                        <img src="https://piracanjuba-institucional-prd.s3.sa-east-1.amazonaws.com/product_images/image/848x1007px-uht-integral-frontal-esquerda-461.webp" alt="Leite">
+                        <p>Leite Piracanjuba integral - R$ 4,50</p>
+                    </div>
+                    <div class="produto-item">
+                        <img src="https://hortifruti.com.br/media/catalog/product/cache/90a67334732b2408839e146d4f241496/1/4/148468---7896022200206---macarrao-parafuso-c-ovos-renata-500g.jpg" alt="Macarrão">
+                        <p>Macarrão Renata - R$ 8,50</p>
+                    </div>
+                    <div class="produto-item">
+                        <img src="https://agrosolo.fbitsstatic.net/img/p/erva-mate-para-terere-uhde-menta-e-limao-500g-80313/273242.jpg?w=700&h=700&v=no-value" alt="Erva">
+                        <p>Erva Tereré UHDE - R$ 12,00</p>
+                    </div>
+                    <div class="produto-item">
+                        <img src="https://phygital-files.mercafacil.com/unicooper/uploads/produto/flocao_de_milho_kimilho_yoki_500g__8bf756b4-8341-4dde-9374-daaacba8502d.jpg" alt="Flocão">
+                        <p>Flocão Milho Kimiliho Yoki 500g - R$ 7,00</p>
+                    </div>
+
+                    
+                </div>
+            </section>
+            <section class="visitors">
+                <p>Quantidade de visitantes: <span id="visitorCount"></span></p>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Mercearia do Seu Prozó</p>
+        </div>
+    </footer>
+</body>
+</html>
